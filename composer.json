@@ -1,0 +1,54 @@
+{
+    "name": "awcodes/trov-airport",
+    "type": "project",
+    "description": "Landing Page Resources for integration into Trov CMS",
+    "keywords": [
+        "framework",
+        "laravel",
+        "filament",
+        "trov",
+        "cms",
+        "landing page"
+    ],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Adam Weston",
+            "email": "awcodes1@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.0.2",
+        "filament/filament": "^2.0",
+        "spatie/laravel-package-tools": "^1.9.2",
+        "awcodes/trov": "dev-main",
+        "awcodes/trov-components": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Trov\\Airport\\": "src/",
+            "Trov\\Airport\\Database\\Factories\\": "database/factories/",
+            "Trov\\Airport\\Database\\Seeders\\": "database/seeders/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Trov\\Airport\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Trov\\Airport\\TrovAirportServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
