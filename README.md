@@ -2,7 +2,7 @@
 
 > This is a work in progress
 
-A pre-configured resource for managing landing pages to install into Trov CMS.
+A pre-configured resource for managing landing pages in Trov CMS.
 
 ## Installation
 
