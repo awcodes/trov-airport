@@ -8,7 +8,6 @@ use Filament\Resources\Table;
 use Trov\Traits\HasSoftDeletes;
 use Filament\Resources\Resource;
 use TrovComponents\Enums\Status;
-use TrovComponents\Filament\Panel;
 use Filament\Forms\Components\Group;
 use TrovComponents\Forms\Timestamps;
 use Filament\Forms\Components\Select;
@@ -23,6 +22,7 @@ use TrovComponents\Tables\Filters\SoftDeleteFilter;
 use App\Filament\Resources\Trov\RunwayResource\Pages\EditRunway;
 use App\Filament\Resources\Trov\RunwayResource\Pages\ListRunways;
 use App\Filament\Resources\Trov\RunwayResource\Pages\CreateRunway;
+use Filament\Forms\Components\Section;
 
 class RunwayResource extends Resource
 {
@@ -56,7 +56,7 @@ class RunwayResource extends Resource
                     ]),
                 Group::make()
                     ->schema([
-                        Panel::make('Details')
+                        Section::make('Details')
                             ->schema([
                                 Select::make('status')
                                     ->default('Draft')
@@ -73,7 +73,7 @@ class RunwayResource extends Resource
                         'lg' => 'full',
                         'xl' => 1,
                     ]),
-                Panel::make('Page Content')
+                Section::make('Page Content')
                     ->schema([
                         PageBuilder::make('content')
                     ])->columnSpan([
